@@ -9,6 +9,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/hello_blank_fragment"
+        android:gravity="center"
+        android:id="@+id/txt_name_info"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainfragm_Logout_Btn"
+        android:text="Logout"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
 
 </FrameLayout>

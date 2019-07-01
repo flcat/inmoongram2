@@ -7,7 +7,7 @@ public class User {
     @SerializedName("response")
     private String Response;
 
-    @SerializedName("user_id")
+    @SerializedName("name")
     private String userName;
 
     public String getResponse() {

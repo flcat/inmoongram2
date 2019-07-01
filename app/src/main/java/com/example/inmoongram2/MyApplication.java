@@ -6,7 +6,9 @@ import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 
 import okhttp3.OkHttpClient;
-
+/*
+    Stetho 사용시 필요한 클래스
+ */
 public class MyApplication extends Application {
     public static OkHttpClient stethoInterceptingClient;
     @Override

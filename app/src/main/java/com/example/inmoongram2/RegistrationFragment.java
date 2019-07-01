@@ -3,19 +3,13 @@ package com.example.inmoongram2;
 
 import android.net.Uri;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import java.io.IOException;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -42,10 +36,10 @@ public class RegistrationFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_registration, container, false);
-        userId = view.findViewById(R.id.edit_id);
-        userName = view.findViewById(R.id.edit_name);
-        userPassword = view.findViewById(R.id.edit_pwd);
-        userPhoto = view.findViewById(R.id.user_photo);
+        userId = view.findViewById(R.id.edit_signup_id);
+        userName = view.findViewById(R.id.edit_signup_name);
+        userPassword = view.findViewById(R.id.edit_signup_pwd);
+        userPhoto = view.findViewById(R.id.userphoto_signup_imgv);
         registerBtn = view.findViewById(R.id.signup_btn);
 
 

@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFormActivityListener {
+public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFormActivityListener,MainFragment.OnLogoutListener {
 
     public static PrefConfig prefConfig;
     public static ApiInterface apiInterface;
@@ -37,6 +37,14 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
 
     @Override
     public void performLogin(String name) {
+        prefConfig.writeName(name);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MainFragment()).commit();
+    }
 
+    @Override
+    public void logoutPerformed() {
+        prefConfig.writeLoginStatus(false);
+        prefConfig.writeName("User");
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new LoginFragment()).commit();
     }
 }

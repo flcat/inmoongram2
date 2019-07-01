@@ -10,11 +10,11 @@
         android:layout_marginTop="80dp"
         android:layout_width="400dp"
         android:layout_height="300dp"
-        android:id="@+id/user_photo"
+        android:id="@+id/userphoto_signup_imgv"
         android:src="@mipmap/ic_launcher_round"/>
 
     <EditText
-        android:id="@+id/edit_id"
+        android:id="@+id/edit_signup_id"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
@@ -28,7 +28,7 @@
 
 
     <EditText
-        android:id="@+id/edit_pwd"
+        android:id="@+id/edit_signup_pwd"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
@@ -41,7 +41,7 @@
         android:textAlignment="textStart"/>
 
     <EditText
-        android:id="@+id/edit_name"
+        android:id="@+id/edit_signup_name"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
