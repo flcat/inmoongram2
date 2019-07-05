@@ -68,11 +68,11 @@ public class LoginFragment extends Fragment {
         String userpwd = UserPassword.getText().toString();
 
         //Log.e("아이디비밀번호",userid+userpwd);
-
         Call<User> call = ApiClient
                 .getInstance()
                 .getApi()
                 .performUserLogin(userid,userpwd);
+
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {

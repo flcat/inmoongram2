@@ -9,13 +9,14 @@ public class ApiClient {
     private static ApiClient mInstance;
     public static Retrofit retrofit = null;
 
-    private ApiClient() {
+    public static Retrofit ApiClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create()) // Retrofit build 할때 client를 새로  interceptor가 추가 되어있는  client 로 교체한다
                     .build();
         }
+        return retrofit;
     }
 
         public static synchronized ApiClient getInstance(){
