@@ -7,31 +7,35 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainMenu extends AppCompatActivity {
     private TextView mTextMessage;
+    FragmentTransaction ft;
+    Fragment fragment;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment = null;
+            ft = getSupportFragmentManager().beginTransaction();
+            fragment = new SimpleFragment();
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
-                    selectedFragment = new MainFragment();
+                    fragment = new MainFragment();
                     return true;
                 case R.id.navigation_favorites:
                     mTextMessage.setText(R.string.title_favorites);
-                    selectedFragment = new FavoritesFragment();
+                    fragment = new FavoritesFragment();
                     return true;
                 case R.id.navigation_search:
                     mTextMessage.setText(R.string.title_search);
-                    selectedFragment = new SearchFragment();
+                    fragment = new SearchFragment();
                     return true;
             }
             return false;
