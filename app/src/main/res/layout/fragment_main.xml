@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,10 +12,8 @@
         android:layout_height="500dp"
         android:scrollbars="vertical"
         android:id="@+id/recyclerview_postlist">
-
     </androidx.recyclerview.widget.RecyclerView>
-
-    <TextView
+   <TextView
         android:id="@+id/txt_name_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,5 +27,11 @@
         android:text="Logout"
         android:layout_gravity="center"
         android:layout_marginTop="300dp"/>
-
+     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu" />
 </FrameLayout>

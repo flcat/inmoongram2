@@ -3,6 +3,7 @@ package com.example.inmoongram2;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,7 +87,7 @@ public class LoginFragment extends Fragment {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
-
+                Log.e("callBack error",t.toString());
             }
         });
 
