@@ -7,6 +7,9 @@ public class User {
     @SerializedName("response")
     private String Response;
 
+    @SerializedName("user_id")
+    private String userId;
+
     @SerializedName("name")
     private String userName;
 
@@ -16,5 +19,9 @@ public class User {
 
     public String getuserName() {
         return userName;
+    }
+
+    public String getUserId() {
+        return userId;
     }
 }
